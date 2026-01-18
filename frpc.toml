@@ -1,15 +1,7 @@
-# Настройки подключения к серверу
 serverAddr = "127.0.0.1"
 serverPort = 7000
-# Включаем QUIC для быстрой передачи данных
-transport.protocol = "quic"
-
-# Настройки QUIC
-transport.quic.keepalivePeriod = 10
-transport.quic.maxIdleTimeout = 30
 
 # Логирование
-log.to = "./frpc.log"
 log.level = "info"
 log.maxDays = 3
 
@@ -20,9 +12,6 @@ type = "tcp"
 localIP = "127.0.0.1"
 localPort = 80
 remotePort = 4080
-# ВАЖНО: привязываем к localhost, а не к 0.0.0.0
-transport.useEncryption = true
-transport.useCompression = true
 
 # Проксирование HTTPS (порт 443 -> 4443)
 [[proxies]]
@@ -31,6 +20,3 @@ type = "tcp"
 localIP = "127.0.0.1"
 localPort = 443
 remotePort = 4443
-# ВАЖНО: привязываем к localhost, а не к 0.0.0.0
-transport.useEncryption = true
-transport.useCompression = true

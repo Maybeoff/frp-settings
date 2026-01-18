@@ -1,19 +1,13 @@
-# Основные настройки сервера
+bindAddr = "0.0.0.0"
 bindPort = 7000
-# Включаем QUIC для быстрой передачи данных
-transport.protocol = "quic"
-# Настройки QUIC
-transport.quic.keepalivePeriod = 10
-transport.quic.maxIdleTimeout = 30
-transport.quic.maxIncomingStreams = 100000
+bindUDPPort = 7000
 
-# Настройки веб-интерфейса (опционально)
+# Веб-интерфейс
 webServer.addr = "127.0.0.1"
 webServer.port = 7500
 webServer.user = "admin"
 webServer.password = "admin"
 
 # Логирование
-log.to = "./frps.log"
 log.level = "info"
 log.maxDays = 3
