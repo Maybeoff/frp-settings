@@ -2,7 +2,8 @@ serverAddr = "127.0.0.1"
 serverPort = 7000
 
 # QUIC протокол для быстрой передачи данных
-transport = "quic"
+[transport]
+protocol = "quic"
 
 # Проксирование HTTP (порт 80 -> 4080)
 [[proxies]]
