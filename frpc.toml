@@ -1,10 +1,6 @@
 serverAddr = "127.0.0.1"
 serverPort = 7000
 
-# Логирование
-log.level = "info"
-log.maxDays = 3
-
 # Проксирование HTTP (порт 80 -> 4080)
 [[proxies]]
 name = "web-http"
