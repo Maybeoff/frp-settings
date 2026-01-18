@@ -3,7 +3,7 @@ serverPort = 7000
 
 # QUIC протокол для быстрой передачи данных
 [transport]
-protocol = "quic"
+type = "quic"
 
 # Проксирование HTTP (порт 80 -> 4080)
 [[proxies]]

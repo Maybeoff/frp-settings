@@ -3,7 +3,7 @@ bindPort = 7000
 
 # QUIC протокол для быстрой передачи данных
 [transport]
-protocol = "quic"
+type = "quic"
 
 # Веб-интерфейс
 webServer.addr = "127.0.0.1"
