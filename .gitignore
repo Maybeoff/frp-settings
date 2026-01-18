@@ -1,0 +1,19 @@
+# Логи
+*.log
+frps.log
+frpc.log
+
+# Временные файлы
+*.tmp
+*.temp
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Резервные копии
+*.bak
+*.backup
+
+# PID файлы
+*.pid

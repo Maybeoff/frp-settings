@@ -1,0 +1,21 @@
+[Unit]
+Description=FRP Server with QUIC
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=root
+Restart=always
+RestartSec=5
+ExecStart=/usr/local/bin/frps -c /usr/local/etc/frp/frps.toml
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Delegate=yes
+LimitNOFILE=1048576
+LimitNPROC=1048576
+LimitCORE=1048576
+TasksMax=1048576
+
+[Install]
+WantedBy=multi-user.target
